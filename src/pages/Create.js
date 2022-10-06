@@ -36,7 +36,7 @@ export default function Create() {
     }
 
     if(title && details){
-      fetch('http://127.0.0.1:8000/notes/', {
+      fetch('https://global-apis.herokuapp.com/notes/', {
         method: 'POST',
         headers: {"Content-type": "application/json"},
         body: JSON.stringify({ title, details, category })
