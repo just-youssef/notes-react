@@ -25,17 +25,19 @@ export default function Notes() {
   }
 
   const breakpointColumnsObj = {
-    default: 3,
-    1300: 2,
-    900: 1,
+    default: 4,
+    1500: 3,
+    1100: 2,
+    700: 1,
   };
 
   return (
-    <Container sx={{m: 2}}>
+    <Container>
       <Masonry
         breakpointCols={breakpointColumnsObj}
         className="my-masonry-grid"
-        columnClassName="my-masonry-grid_column">
+        columnClassName="my-masonry-grid_column"
+      >
       {
         notes.map(note => (
           <div key={note.id}>

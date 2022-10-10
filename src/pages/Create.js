@@ -44,7 +44,7 @@ export default function Create() {
     }
   }
   return (
-    <Container sx={{m: 2}}>
+    <Container sx={{my: 2}}>
       <Typography
         variant="h6"
         component="h2"

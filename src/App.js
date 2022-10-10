@@ -4,6 +4,7 @@ import Notes from './pages/Notes';
 import Create from './pages/Create';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import Layout from './components/Layout';
+import { Box } from '@mui/material';
 
 const darkTheme = createTheme({
   palette: {
@@ -15,12 +16,14 @@ function App() {
   return (
     <ThemeProvider theme={darkTheme}>
       <Router>
-        <Layout>
-          <Routes>
-            <Route exact path="/" element={<Notes />} />
-            <Route path="/create" element={<Create />} />
-          </Routes>
-        </Layout>
+        <Box minWidth="80vw" minHeight="100vh" bgcolor="#121212">
+          <Layout>
+            <Routes>
+              <Route exact path="/" element={<Notes />} />
+              <Route path="/create" element={<Create />} />
+            </Routes>
+          </Layout>
+        </Box>
       </Router>
     </ThemeProvider>
   );
